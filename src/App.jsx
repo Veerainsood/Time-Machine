@@ -1,5 +1,4 @@
 import { Sky, Stars } from '@react-three/drei';
-import './App.css';
 import { Canvas } from '@react-three/fiber';
 import { Physics } from '@react-three/cannon';
 import {Ground} from './Components/Ground'; // Ensure this is the correct import for your Ground component
