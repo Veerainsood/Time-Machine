@@ -1,7 +1,7 @@
 import { useFrame, useThree } from "@react-three/fiber"
 import { useSphere } from "@react-three/cannon";
 import { useEffect, useRef } from "react";
-import { Vector3 } from "three";
+import { PointLight, Vector3 } from "three";
 import { useKeyBoard } from "../hooks/useKeyBoard";
 
 const JUMP_FORCE = 10;
@@ -17,6 +17,7 @@ export const Player = () => {
         position: [1,1,1]
     }))
     //for position
+    
     const pos = useRef([1,1,1])// we need this sphere to follow useSphere ref.
     useEffect(()=>{
         api.position.subscribe((position)=> pos.current = position)
@@ -29,10 +30,11 @@ export const Player = () => {
     })
 
 
-
     useFrame(()=>{//updates the camera pos at every frane
         camera.position.copy(new Vector3(pos.current[0],pos.current[1],pos.current[2]))//this vector sets the new camera position to the position of the player
         
+       
+
         const direction = new Vector3()
         const frontVec  = new Vector3(
             0,  //x

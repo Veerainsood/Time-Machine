@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Yrsa
+Author: Rosetta
+Url: https://fonts.google.com/specimen/Yrsa
+
+Font: Abril Fatface
+Author: TypeTogether
+Url: https://fonts.google.com/specimen/Abril+Fatface
