@@ -5,7 +5,7 @@ import { PointLight, Vector3 } from "three";
 import { useKeyBoard } from "../hooks/useKeyBoard";
 
 const JUMP_FORCE = 10;
-const SPEED = 4;
+const SPEED = 10;
 
 
 export const Player = () => {
@@ -31,7 +31,7 @@ export const Player = () => {
 
 
     useFrame(()=>{//updates the camera pos at every frane
-        camera.position.copy(new Vector3(pos.current[0],pos.current[1],pos.current[2]))//this vector sets the new camera position to the position of the player
+        camera.position.copy(new Vector3(pos.current[0],pos.current[1]+1,pos.current[2]))//this vector sets the new camera position to the position of the player
         
        
 

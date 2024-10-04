@@ -5,8 +5,8 @@ import { TreeModel } from '../models/TreeModel';
 import { Tree2Model } from '../models/Tree2';
 import { Tree3Model } from '../models/Tree3';
 
-const spawnDistance = 30; // Distance within which trees will spawn
-const deleteDistance = 30; // Distance beyond which trees will be deleted
+const spawnDistance = 10; // Distance within which trees will spawn
+const deleteDistance = 20; // Distance beyond which trees will be deleted
 
 export const ForestGen = () => {
   const cameraPosition = useRef(new Vector3());
@@ -14,13 +14,35 @@ export const ForestGen = () => {
   const treePositions = useRef([]); // Store tree positions
 
   // Generate random tree positions once
-  if (treePositions.current.length <5) {
-    treePositions.current = Array.from({ length: 60 }, (_, index) => ({
-      type: index % 3 === 0 ? 'TreeModel' : index % 3 === 1 ? 'Tree2Model' : 'Tree3Model',
-      position: [Math.random() * 40 - 50, 0, Math.random() * 40 - 50], // Random position within [-50, 50] range
-      key: `tree-${index}`,
-    }));
-    
+  if (treePositions.current.length === 0) {
+    // Only generate tree positions once
+    treePositions.current = Array.from({ length: 60 }, (_, index) => {
+      let position;
+
+      // Randomly select a quadrant
+      const quadrant = Math.floor(Math.random() * 3); // 0 = 2nd, 1 = 3rd, 2 = 4th
+
+      switch (quadrant) {
+        case 0: // 2nd Quadrant
+          position = [Math.random() * -50, 0, Math.random() * 50];
+          break;
+        case 1: // 3rd Quadrant
+          position = [Math.random() * -50, 0, Math.random() * -50];
+          break;
+        case 2: // 4th Quadrant
+          position = [Math.random() * 50, 0, Math.random() * -50];
+          break;
+        default:
+          position = [0, 0, 0]; // Fallback
+          break;
+      }
+
+      return {
+        type: index % 3 === 0 ? 'TreeModel' : index % 3 === 1 ? 'Tree2Model' : 'Tree3Model',
+        position,
+        key: `tree-${index}`,
+      };
+    });
   }
 
   useFrame(({ camera }) => {

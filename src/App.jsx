@@ -16,11 +16,9 @@ function App() {
     <>
       <Canvas shadows>
         <SkyCycle />
-        {/* <Sky sunPosition={[10, 100, 10]} turbidity={1}/>
-        <Stars count={0}/> */}
         <ambientLight /> 
         <FPV />
-        <Physics gravity={[0, -100, 0]}>
+        <Physics gravity={[0, -300, 0]}>
           <Player />
           <CharModel position={[10, 0, 1]} rotation={[0, Math.PI / 2, 0]} scale={[0.014, 0.014, 0.014]} />
           <CharModel position={[23, 0, 4]} rotation={[0, Math.PI / 2, 0]} scale={[0.014, 0.014, 0.014]} />
