@@ -39,13 +39,13 @@ export const MyPlayer = () => {
     const model = useGLTF("/Moodels/character1.glb");
     console.log(model)
     const { actions } = useAnimations(model.animations, model.scene);
-   model.scene.scale.set(0.5,0.5,0.5);
+    model.scene.scale.set(0.5,0.5,0.5);
     const currentAction = useRef("");
     const controlsRef = useRef(null);
     const camera = useThree((state) => state.camera);
-
-    
-
+         
+         
+         
     const updateCameraTarget = (moveX, moveZ) => {
         camera.position.x += moveX;
         camera.position.z += moveZ;

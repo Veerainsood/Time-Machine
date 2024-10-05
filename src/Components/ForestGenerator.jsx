@@ -20,16 +20,13 @@ export const ForestGen = () => {
       let position;
 
       // Randomly select a quadrant
-      const quadrant = Math.floor(Math.random() * 3); // 0 = 2nd, 1 = 3rd, 2 = 4th
+      const quadrant = Math.floor(Math.random() * 2); // 0 = 3nd, 1 = 4rd, 2 = 4th
 
       switch (quadrant) {
-        case 0: // 2nd Quadrant
-          position = [Math.random() * -50, 0, Math.random() * 50];
-          break;
-        case 1: // 3rd Quadrant
+        case 0: // 3nd Quadrant
           position = [Math.random() * -50, 0, Math.random() * -50];
           break;
-        case 2: // 4th Quadrant
+        case 1: // 4rd Quadrant
           position = [Math.random() * 50, 0, Math.random() * -50];
           break;
         default:
