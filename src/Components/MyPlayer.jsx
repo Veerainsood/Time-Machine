@@ -1,9 +1,10 @@
 import { OrbitControls, useAnimations, useGLTF } from "@react-three/drei"
-import { useKeyBoard } from "../hooks/useKeyBoard"
 import { useEffect, useRef } from "react"
 import { useFrame, useThree } from "@react-three/fiber"
 
 import * as THREE from 'three'
+import { RigidBody } from "@react-three/rapier"
+import { board } from "../hooks/board"
 
 let walkDirection = new THREE.Vector3();
 let rotateAngle = new THREE.Vector3(0, 1, 0);
@@ -35,17 +36,16 @@ const directionOffset = ({ moveForward, moveBackward, moveLeft, moveRight }) => 
 };
 
 export const MyPlayer = () => {
-    const { moveBackward, moveForward, moveRight, moveLeft, jump } = useKeyBoard();
-    const model = useGLTF("/Moodels/character1.glb");
-    console.log(model)
+    const { moveBackward, moveForward, moveRight, moveLeft, jump } = board();
+    const model = useGLTF("/character1.glb");
     const { actions } = useAnimations(model.animations, model.scene);
-    model.scene.scale.set(0.5,0.5,0.5);
+   model.scene.scale.set(0.5,0.5,0.5);
     const currentAction = useRef("");
     const controlsRef = useRef(null);
     const camera = useThree((state) => state.camera);
-         
-         
-         
+
+    
+
     const updateCameraTarget = (moveX, moveZ) => {
         camera.position.x += moveX;
         camera.position.z += moveZ;
@@ -110,7 +110,9 @@ export const MyPlayer = () => {
     return (
         <>
             <OrbitControls ref={controlsRef} />
+            <RigidBody type="fixed" colliders='cuboid'>
             <primitive object={model.scene} />
+            </RigidBody>
         </>
     );
 };

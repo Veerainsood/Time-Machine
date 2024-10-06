@@ -15,8 +15,8 @@ body{
 }
 canvas {
   margin: 0 ; 
-  width: 600px; /* Adjust width as needed */
-  height: 700px; /* Maintain aspect ratio */
+  width: 1000px; /* Adjust width as needed */
+  height: 1000px; /* Maintain aspect ratio */
 }
 .root{
     display: flex; /* Corrected to inline-flex */

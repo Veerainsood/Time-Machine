@@ -18,7 +18,7 @@ export const SkyCycle = () => {
     [-40, 10, 0],
   ];
 
-  const transitionDelay = 10; // Delay of 2 seconds between each step
+  const transitionDelay = 2; // Delay of 2 seconds between each step
 
   useFrame((state, delta) => {
     timeElapsed.current += delta;
