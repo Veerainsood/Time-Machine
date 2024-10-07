@@ -26,7 +26,7 @@ export function EntryCircle(props) {
             type="fixed"
             onIntersectionEnter={() => {
               console.log('hi');
-              window.open("../login/index.html","_top");        
+              window.open("/timeTravel","_top");        
             }}
           >
             <mesh
