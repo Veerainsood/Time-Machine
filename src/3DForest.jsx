@@ -22,6 +22,7 @@ import { FaunaGen } from './Components/FaunaGenerator';
 import { CarryCart } from './models/Cart1';
 
 import "../src/CompCSS/ThreeD.css"
+import { Mountain } from './Mountain';
 function Forest() {  
   return (
     <>    
@@ -52,6 +53,17 @@ function Forest() {
         <Hut position={[-30, 1.5, 36]} rotation={[0, Math.PI / 2, 0]} scale={[1.7,1.7,1.7]}/>
         <Cart position={[-15, 0, 39]} rotation={[0, Math.PI/2 , 0]} scale={[.3,.3,.3]}/>  
         <CarryCart position={[-10, 0, 39]} rotation={[0, -Math.PI , 0]} scale={[1,1,1]}/>  
+        <Mountain position={[75, -15, 15]} rotation={[0, -Math.PI/2 , 0]} scale={[1.5,1.5,1.5]} />
+        <Mountain position={[90, -25, 20]} rotation={[0, Math.PI/2 , 0]} scale={[2,2,2]} />
+        <Mountain position={[69, -10, -34]} rotation={[0, Math.PI/2 , 0]} scale={[1,1,1]} />
+        <Mountain position={[-25, -15, -60]} rotation={[0, 3*Math.PI/4 , 0]} scale={[1,1,1]} />   
+        <Mountain position={[39, -20, -60]} rotation={[0, 3*Math.PI/4 , 0]} scale={[2,2,2]} />   
+        <Mountain position={[-55, -15, -40]} rotation={[0, 3*Math.PI/4 , 0]} scale={[1,1,1]} />  
+        <Mountain position={[-105, -20, -50]} rotation={[0, 3*Math.PI/4 , 0]} scale={[2,2,2]} /> 
+        <Mountain position={[-145, -20, 20]} rotation={[0, 3*Math.PI/2 , 0]} scale={[2,2,2]} /> 
+        <Mountain position={[-145, -15, 5]} rotation={[0, Math.PI/6, 0]} scale={[1,1,1]} />  
+        <Mountain position={[35, -30, 105]} rotation={[0, Math.PI/2, 0]} scale={[2,2,2]} />  
+        <Mountain position={[-45, -20, 105]} rotation={[0, Math.PI/2, 0]} scale={[2,2,2]} />  
         </Physics>
       <PointerLockControls />
       </Canvas>
