@@ -43,7 +43,7 @@ function Forest() {
         <Physics gravity={[0, -10, 0]} debug>
         <Player />          
         <TimeMachine2 position={[40, 0,9]} rotation={[0, Math.PI/2, 0]} scale={[.5, .5, .5]}/> 
-        <EntryCircle position={[40, 0, 12]} rotation={[0, Math.PI/2, 0]} scale={[.5, .1, .5]}/>
+        <EntryCircle position={[40, 0, 14]} rotation={[0, Math.PI/2, 0]} scale={[.5, .1, .5]}/>
         <ForestGen /> 
         <FaunaGen />
         <Hindu position={[30, 0, 40]} rotation={[0, Math.PI / 2, 0]} scale={[1, 1, 1]}/>
