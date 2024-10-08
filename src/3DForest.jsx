@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber';
-import { Physics } from '@react-three/rapier';
+import { Physics, RigidBody } from '@react-three/rapier';
 import {Ground} from './Components/Ground'; // Ensure this is the correct import for your Ground component
 import { Player } from './Components/Player';
 import { FPV } from './Components/FPV';
@@ -44,13 +44,33 @@ function Forest() {
         <Physics gravity={[0, -10, 0]} debug>
         <Player />          
         <TimeMachine2 position={[40, 0,9]} rotation={[0, Math.PI/2, 0]} scale={[.5, .5, .5]}/> 
+        <RigidBody
+            sensor
+            type="fixed"
+            onIntersectionEnter={() => {
+              console.log('hi');
+              window.open("/timeTravel","_top");        
+            }}
+          >
         <EntryCircle position={[40, 0, 14]} rotation={[0, Math.PI/2, 0]} scale={[.5, .1, .5]}/>
+        </RigidBody>
+        <RigidBody
+            sensor
+            type="fixed"
+           
+            onIntersectionEnter={() => {
+              console.log('hi');
+              window.open("/NavigationPage","_top");        
+            }}
+          >
+        <EntryCircle position={[-21, 7, 27]} rotation={[0, Math.PI/2, 0]} scale={[.5, .1, .5]}/>
+        </RigidBody>
         <ForestGen /> 
         <FaunaGen />
         <Hindu position={[30, 0, 40]} rotation={[0, Math.PI / 2, 0]} scale={[1, 1, 1]}/>
         <Pond position={[-69, -3.2, 10]} rotation={[-Math.PI/26, -Math.PI / 2, -Math.PI/15]} scale={[.05, .05, .05]} />
         <Ground position={[0,0,0]}/>
-        <Hut position={[-30, 1.5, 36]} rotation={[0, Math.PI / 2, 0]} scale={[1.7,1.7,1.7]}/>
+        <Hut position={[-30, 1.5, 27]} rotation={[0, Math.PI / 2, 0]} scale={[1.7,1.7,1.7]}/>
         <Cart position={[-15, 0, 39]} rotation={[0, Math.PI/2 , 0]} scale={[.3,.3,.3]}/>  
         <CarryCart position={[-10, 0, 39]} rotation={[0, -Math.PI , 0]} scale={[1,1,1]}/>  
         <Mountain position={[75, -15, 15]} rotation={[0, -Math.PI/2 , 0]} scale={[1.5,1.5,1.5]} />

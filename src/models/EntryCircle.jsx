@@ -14,28 +14,19 @@ export function EntryCircle(props) {
   const [showScrollbar, setShowScrollbar] = useState(false);
 
   useFrame((state) => {
-    group.current.position.y = Math.abs(Math.sin(state.clock.elapsedTime) * 0.5);
+    group.current.position.y = Math.abs(Math.sin(state.clock.elapsedTime) * 0.5 + props.position[1]);
   });
 
   return (
     <>
       <group ref={group} {...props} dispose={null}>
         <group name="Scene">
-          <RigidBody
-            sensor
-            type="fixed"
-            onIntersectionEnter={() => {
-              console.log('hi');
-              window.open("/timeTravel","_top");        
-            }}
-          >
             <mesh
               name="Cylinder073"
               geometry={nodes.Cylinder073.geometry}
               material={materials.Entrycircle_neon}
               scale={[2, 0.75, 2]}
             />
-          </RigidBody>
         </group>
       </group>
 
