@@ -3,7 +3,8 @@
 ## Table of Contents
 - [About](#about)
 - [Features](#features)
-- [Installation](#installation)        
+- [Installation](#installation)
+- [Contribution](#contribution)      
 - [Acknowledgements](#acknowledgements) 
 
 ## About
