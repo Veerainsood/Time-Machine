@@ -38,7 +38,7 @@ h1{
 .negative{
     background-color: rgb(132, 149, 149);
 }
-button {
+#StartGame {
     font-size: 18px;
     margin-top: 200px;
     height: 400px;

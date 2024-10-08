@@ -156,7 +156,7 @@ function SaveForest() {
         <div className="App">
             <link rel='stylesheet' href='./SaveForest.css'></link>
             <h1>Your Green Count: {greenCount}</h1>
-            {!isGameActive && <button onClick={startGame}>Start Game</button>}
+            {!isGameActive && <button id="StartGame" onClick={startGame}>Start Game</button>}
             {isGameActive && (
                 <div id="action-bar" onClick={handleActionClick} className={actionType}>
                     {actionText}

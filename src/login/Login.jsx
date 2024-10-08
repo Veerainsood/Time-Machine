@@ -142,7 +142,6 @@ export default function LoginMachine() {
                 <input type="checkbox" id="remember" />
                 <p>Remember me</p>
               </label>
-              <a href="#">Forgot password?</a>
             </div>
             <button id="submit" type="submit" >Log In</button>
             <div className="register">
