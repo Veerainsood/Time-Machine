@@ -1,7 +1,10 @@
 import Forest from "./3DForest";
 import { createBrowserRouter ,RouterProvider} from "react-router-dom";
-import LoginMachine from "./Components/Login";
 import DateTimePicker from "./Components/Timetravel";
+import LoginMachine from "./login/Login";
+import Register from "./Register/Register";
+import NavigationPage from "./Navigation/NavigationPage";
+import SaveForest from "./SaveForest/SaveForest";
 
 const router = createBrowserRouter(
   [
@@ -17,6 +20,21 @@ const router = createBrowserRouter(
     {
       path:"/timeTravel",
       element:<DateTimePicker/>
+    }
+    ,
+    {
+      path:"/Register",
+      element:<Register/>
+    }
+    ,
+    {
+      path:"/NavigationPage",
+      element:<NavigationPage/>
+    }
+    ,
+    {
+      path:"/SaveForest",
+      element:<SaveForest/>
     }
   ]
 );
