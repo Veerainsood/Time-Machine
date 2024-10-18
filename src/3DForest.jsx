@@ -5,21 +5,21 @@ import { Player } from './Components/Player';
 import { FPV } from './Components/FPV';
 import { ForestGen } from './Components/ForestGenerator';
 import { SkyCycle } from './Components/ChangeDayNight';
-import { TimeMachine2 } from './models/TimeMachine2';
-import { Hindu } from './models/HinduTempleModel';
-import { EntryCircle } from './models/EntryCircle';
+import { TimeMachine2 } from './ForestModels/TimeMachine2';
+import { Hindu } from './ForestModels/HinduTempleModel';
+import { EntryCircle } from './ForestModels/EntryCircle';
 import { Loader, PointerLockControls } from '@react-three/drei';
 import { Suspense } from "react"
 import { KeyboardControls } from '@react-three/drei';
-import { Hut } from './models/Hut';
+import { Hut } from './ForestModels/Hut';
 import { Axes } from './Components/AxesHelper';
 import { MyPlayer } from './Components/MyPlayer';
-import { Pond } from './models/Pond';
-import { Cart } from './models/Cart';
-import { Peackock } from './models/Peackock';
-import { Tiger } from './models/Tiger';
+import { Pond } from './ForestModels/Pond';
+import { Cart } from './ForestModels/Cart';
+import { Peackock } from './ForestModels/Peackock';
+import { Tiger } from './ForestModels/Tiger';
 import { FaunaGen } from './Components/FaunaGenerator';
-import { CarryCart } from './models/Cart1';
+import { CarryCart } from './ForestModels/Cart1';
 
 import "../src/CompCSS/ThreeD.css"
 import { Mountain } from './Mountain';

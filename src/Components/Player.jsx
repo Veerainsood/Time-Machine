@@ -5,7 +5,7 @@ import { useKeyboardControls } from "@react-three/drei";
 import { CapsuleCollider, RigidBody } from "@react-three/rapier";
 
 
-const SPEED = 10;
+const SPEED = 20;
 const JUMP_VELOCITY = 7.5;
 const direction = new THREE.Vector3();
 const frontVector = new THREE.Vector3();

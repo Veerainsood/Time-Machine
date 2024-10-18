@@ -1049,7 +1049,7 @@ export default function Forest(props) {
       scale={0.286}
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
-      onClick={() => (window.location.href = '/3D')}
+      onClick={() => (window.location.href = '/Forest')}
     >
       <mesh
         name="0"

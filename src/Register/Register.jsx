@@ -3,7 +3,7 @@ import { initializeApp } from 'firebase/app';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import './style.css'
-import { TimeMachine2 } from '../models/TimeMachine2';
+import { TimeMachine2 } from '../ForestModels/TimeMachine2';
 import { Physics } from '@react-three/rapier';
 import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';

@@ -5,12 +5,18 @@ import LoginMachine from "./login/Login";
 import Register from "./Register/Register";
 import NavigationPage from "./Navigation/NavigationPage";
 import SaveForest from "./SaveForest/SaveForest";
+import City from "./ModernCity/City";
 
 const router = createBrowserRouter(
   [
     {
-      path:"/3D",
+      path:"/Forest",
       element:<Forest/>
+    }
+    ,
+    {
+      path:"/City",
+      element:<City/>
     }
     ,
     {
