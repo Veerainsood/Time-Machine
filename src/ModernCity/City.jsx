@@ -1,4 +1,6 @@
 import { Canvas } from '@react-three/fiber';
+import {  useEffect } from 'react';
+import React, { useState } from 'react';
 import { Physics, RigidBody } from '@react-three/rapier';
 import {Ground} from '../Components/Ground'; // Ensure this is the correct import for your Ground component
 import { Player } from '../Components/Player';
@@ -15,12 +17,25 @@ import { CityModel2 } from './Models/CityModel2';
 import { Market } from './Models/SuperMarket';
 
 import { BasketBallStad } from './Models/basketBallStad';
+import { Disco } from './Models/Disco';
 import { McDonalds } from './Models/mcDonalds';
 import { House } from './Models/House';
+import { HyperCar1 } from './Models/CarHyper1';
+import * as THREE from 'three';
+import { HyperCar2 } from './Models/CarHyper2';
+import { GreyTheater } from './Models/GreyTheater';
+import { CarPackSix } from './Models/CarPackSix';
+import { TheaterBig } from './Models/TheaterBig';
+
 function City() {  
+
+
   return (
     <>    
+  
     <link rel='stylesheet' href='../src/CompCSS/ThreeD.css'></link>
+
+  
       <Suspense>
       <KeyboardControls
           map={[
@@ -50,15 +65,29 @@ function City() {
         </RigidBody>
         <CityModel2 position={[40, 0, 14]} rotation={[0, Math.PI/2, 0]} scale={[1, 1, 1]}/>
         <Market position={[-7, -1.5, -157]} rotation={[0, Math.PI, 0]} scale={[4, 4, 4]}/>
-        <BasketBallStad position={[-110, 1, -67]} rotation={[0, Math.PI, 0]} scale={[4, 4, 4]}/>
+        <BasketBallStad position={[-150, 1, -79]} rotation={[0, Math.PI, 0]} scale={[5, 5, 5]}/>
         <McDonalds position={[15, 0, -30]} rotation={[0, 0, 0]} scale={[1.3, 1.5, 1.5]}/>
         <House position={[-90, -5, 30]} rotation={[0, 0, 0]} scale={[10,10, 10]}/>
+        <pointLight position={[32, 10, 30]} intensity={1000} color="#fff" target={new THREE.Vector3(0, 0, -1)} />
+        <HyperCar1 position={[30,0.2, 30]} rotation={[0, 0, 0]} scale={[150,150, 150]}/>
+        {/* <pointLight position={[35, 5, 30]} intensity={100} color="#fff" target={new THREE.Vector3(0, 0, -1)} /> */}
+        <HyperCar2 position={[37,0.2, 30]} rotation={[0, 0, 0]} scale={[150,150, 150]}/>
+        <HyperCar1 position={[26,0.2, 30]} rotation={[0, 0, 0]} scale={[150,150, 150]}/>
+        <pointLight position={[25, 20, 90]} intensity={2000} color="#fff" target={new THREE.Vector3(0, 0, -1)} />
+        <HyperCar2 position={[33.5,0.2, 30]} rotation={[0, 0, 0]} scale={[150,150, 150]}/>
+      <BasketBallStad position ={[30,0.5,63]} scale ={[3.5,3.5,3.5]}/>
+      <Disco position ={[-80,0.5,-80]} scale ={[5.5,5.5,5.5]}/>
+       {/* <pointLight position={[35, 5, 30]} intensity={100} color="#fff" target={new THREE.Vector3(0, 0, -1)} /> */}
+       <GreyTheater position ={[25,0.4,190]} rotation={[0, 90, 0]} scale ={[0.8,0.8,0.8]} /> 
+       <CarPackSix position ={[10,0.1,120]} rotation={[0, 0, 0]} scale ={[2.3,2.3,2.3]} />
+       <TheaterBig position ={[15,2,350]} rotation={[0, 0, 0]} scale ={[1.4,1.4,1.4]} />
         </Physics>
       <PointerLockControls />
       </Canvas>
       </KeyboardControls>
       <Loader />
       </Suspense>    
+     
       <div className='absolute centered cursor'>+</div>  
     </>
   );
