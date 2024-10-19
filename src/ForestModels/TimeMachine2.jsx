@@ -10,7 +10,7 @@ import { RigidBody } from '@react-three/rapier'
 export function TimeMachine2(props) {
   const { nodes, materials } = useGLTF('/compressedMachine.glb')
   return (
-    <RigidBody type='fixed' colliders='cuboid'>
+    <RigidBody type='fixed' colliders='hull'>
     <group {...props} dispose={null}>
       <mesh geometry={nodes.alarm_clock_01001_M_clock_0.geometry} material={materials.M_clock} position={[0, 3.316, -2.728]} rotation={[-1.862, 0, 0]} scale={35.41} />
       <mesh geometry={nodes.alarm_clock_01003_M_back_machine_0.geometry} material={materials.M_back_machine} position={[-3.401, 3.381, -1.963]} rotation={[-1.739, 0, 0]} />

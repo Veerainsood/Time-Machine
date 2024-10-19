@@ -4,22 +4,3 @@
     margin: 0;
     padding: 0;
 }
-.button-container {
-    position: fixed; /* Fixed positioning to stay in view */
-    bottom: 20px; /* Distance from the bottom */
-    right: 20px; /* Distance from the right */
-    z-index: 10; /* Ensure it's on top of other elements */
-  }
-  
-  .audio-button {
-    padding: 10px 20px; /* Add some padding */
-    font-size: 16px; /* Increase font size for better visibility */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    margin: 10px; /* Add margin to separate from other elements */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
-  }
-  
-  

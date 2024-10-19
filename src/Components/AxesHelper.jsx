@@ -5,7 +5,7 @@ import {  useThree } from '@react-three/fiber';
   const { scene } = useThree(); // Access the scene object from react-three-fiber
 
   useEffect(() => {
-    const axesHelper = new AxesHelper(50); // Create AxesHelper with a size of 5
+    const axesHelper = new AxesHelper(5); // Create AxesHelper with a size of 5
     scene.add(axesHelper); // Add it to the scene
 
     return () => {

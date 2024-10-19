@@ -6,6 +6,7 @@ import Register from "./Register/Register";
 import NavigationPage from "./Navigation/NavigationPage";
 import SaveForest from "./SaveForest/SaveForest";
 import City from "./ModernCity/City";
+import FutureCity from "./FutureCity/FutureCity";
 
 const router = createBrowserRouter(
   [
@@ -17,6 +18,10 @@ const router = createBrowserRouter(
     {
       path:"/City",
       element:<City/>
+    },
+    {
+      path:"/FutureCity",                                                                             
+      element:<FutureCity/>
     }
     ,
     {
