@@ -7,12 +7,17 @@ import NavigationPage from "./Navigation/NavigationPage";
 import SaveForest from "./SaveForest/SaveForest";
 import City from "./ModernCity/City";
 import FutureCity from "./FutureCity/FutureCity";
+import DestroyedCity from "./DestroyedCity/DestroyedCity";
 
 const router = createBrowserRouter(
   [
     {
       path:"/Forest",
       element:<Forest/>
+    },
+    {
+      path:"/DestroyedCity",
+      element:<DestroyedCity/>
     }
     ,
     {

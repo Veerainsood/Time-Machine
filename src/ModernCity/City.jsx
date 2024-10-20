@@ -29,6 +29,11 @@ import { TheaterBig } from './Models/TheaterBig';
 import { Modern_VILLA } from './Models/Modern_VILLA';
 import { Trash } from './Models/Trash';
 import { Gas_Station } from './Models/Gas_Station';
+import { Cricket } from './Models/Cricket';
+import { Fast_Food } from './Models/Fast_Food';
+import { Gas_pump } from './Models/Gas_pump';
+import { SpanishHouse } from './Models/SpanishHouse';
+import { Vending } from './Models/Vending';
 
 function City() {  
 
@@ -82,13 +87,19 @@ function City() {
       <Disco position ={[-80,0.5,-80]} scale ={[5.5,5.5,5.5]}/>
        {/* <pointLight position={[35, 5, 30]} intensity={100} color="#fff" target={new THREE.Vector3(0, 0, -1)} /> */}
        <GreyTheater position ={[25,0.4,190]} rotation={[0, 90, 0]} scale ={[0.8,0.8,0.8]} /> 
-       <CarPackSix position ={[10,0.1,120]} rotation={[0, 0, 0]} scale ={[2.3,2.3,2.3]} />
+       {/* <CarPackSix position ={[10,0.1,120]} rotation={[0, 0, 0]} scale ={[2.3,2.3,2.3]} /> */}
        <TheaterBig position ={[15,2,350]} rotation={[0, 0, 0]} scale ={[1.4,1.4,1.4]} />
        <Building_One position ={[-100,0.1,380]} rotation={[0,0,0]} scale ={[0.007,0.007,0.007]} />
        <Modern_VILLA position ={[-70, -1, 50]} rotation={[0,359.7,0]} scale ={[2,2,2]} />
         <pointLight position={[35,10,-20]} intensity={1000} color="#fff" target={new THREE.Vector3(0, 0, -1)} />
         <Trash position ={[35, 0, -20]} rotation={[0,359.7,0]} scale ={[0.05,0.05,0.05]} />
         <Gas_Station position={[-147,-0.4,200]} rotation={[0, 69.12, 0]} scale={[2,2.5, 2]}/>
+        <Cricket position ={[10,0.3,270]} rotation={[0, 0, 0]} scale ={[0.6,0.6,0.6]} />
+        <Fast_Food position ={[10,0.1,120]} rotation={[0,180.62,0]} scale ={[0.24  ,0.2,0.4]} />
+        <Gas_pump position ={[10,0.1,93]} rotation={[0,0,0]} scale ={[3.5 ,3.5,3.5]} />
+        <SpanishHouse position ={[-135, -1, 55]} rotation={[0,359.7,0]} scale ={[  2.5,3,3.4]} />
+        <pointLight position={[-7,15 ,130]} intensity={1000} color="#fff" target={new THREE.Vector3(0, 0, -1)} />
+        <Vending   position ={[-16 ,0,148 ]} rotation={[0,91.2 ,0]} scale ={[5,7,5]} />
         </Physics>
       <PointerLockControls />
       </Canvas>
