@@ -7,7 +7,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { RigidBody } from '@react-three/rapier'
 
-export function Mountain(props) {
+export function MountainFog(props) {
   const { nodes, materials } = useGLTF('/mountainsComp.glb')
   return (
     <group {...props} dispose={null}>
@@ -15,7 +15,7 @@ export function Mountain(props) {
       {/* <mesh geometry={nodes.Object_3.geometry} material={materials.base} position={[-114.939, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} /> */}
       <mesh geometry={nodes.Object_4.geometry} material={materials.cliff} position={[-114.939, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} />
       </RigidBody>
-      {/* <mesh geometry={nodes.Object_5.geometry} material={materials.cloud} position={[-114.939, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} /> */}
+      <mesh geometry={nodes.Object_5.geometry} material={materials.cloud} position={[-114.939, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} />
     </group>
   )
 }

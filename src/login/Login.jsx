@@ -6,13 +6,13 @@ Command: npx gltfjsx@6.5.2 ./public/compressedMachine.glb -o ./src/TT.jsx
 import React,{useEffect, useState} from 'react'
 import { Html, OrbitControls, useGLTF } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber';
-import '../CompCSS/Login.css';
+
 import { NavLink, useNavigate } from 'react-router-dom';
 
 import firebaseApp from './firebase';
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
 //import { useAuth } from './AuthProvider'; // Adjust the path based on your file structure
-
+import  '../CompCSS/Login.css';
 
 //const auth = getAuth(app);
 //console.log('Auth',auth);
@@ -26,6 +26,7 @@ function Machine(props) {
  
   const { nodes, materials } = useGLTF('/compressedMachine.glb')
   return (
+
     <group {...props} dispose={null}>
       <mesh geometry={nodes.alarm_clock_01001_M_clock_0.geometry} material={materials.M_clock} position={[0, 3.316, -2.728]} rotation={[-1.862, 0, 0]} scale={35.41} />
       <mesh geometry={nodes.alarm_clock_01003_M_back_machine_0.geometry} material={materials.M_back_machine} position={[-3.401, 3.381, -1.963]} rotation={[-1.739, 0, 0]} />
@@ -57,6 +58,7 @@ function Machine(props) {
       <instancedMesh args={[nodes.Sphere003_M_front_machine_0.geometry, materials.M_front_machine, 3]} instanceMatrix={nodes.Sphere003_M_front_machine_0.instanceMatrix} />
       <instancedMesh args={[nodes.Sphere004_M_front_machine_0.geometry, materials.M_front_machine, 5]} instanceMatrix={nodes.Sphere004_M_front_machine_0.instanceMatrix} />
     </group>
+
   )
 }
 
@@ -112,7 +114,7 @@ export default function LoginMachine() {
 
   return (
     <>
-      <link rel="stylesheet" href="../CompCSS/Login.css" />
+     <link rel='stylesheet' href='../CompCSS/Login.css'/>
       <div id="position">
         <div className="wrapper">
           <form onSubmit={handleSubmit}>
