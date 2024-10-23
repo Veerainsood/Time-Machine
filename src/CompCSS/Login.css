@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url('./Background.png') no-repeat center center, black;
+  background: url('../login/Background.png') no-repeat center center, black;
   background-size: cover;
   padding: 0 20px;
   overflow: hidden;
