@@ -62,21 +62,22 @@ const router = createBrowserRouter(
     }
     ,
     {
-      path:"/NavigationPage",
+      path:"/NavigationPage", // Route for the navigation page
       element:<NavigationPage/>
     }
     ,
     {
-      path:"/SaveForest",
+      path:"/SaveForest", // Route for saving the forest state
       element:<SaveForest/>
     }
   ]
 );
 
+// Main App component to set up routing
 function App(){
     return (
-      <RouterProvider router={router}/>
+      <RouterProvider router={router}/> // Providing the router to handle navigation between components
     )
 }
 
-export default App;
+export default App; // Exporting the App component as default

@@ -9,11 +9,15 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url("../../public/Background.png"), black;
+  background: url("../login/Background.png"), black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-size: cover;
   padding: 0 20px;
   overflow: hidden;
 }
+
 
 #position {
   display: flex;

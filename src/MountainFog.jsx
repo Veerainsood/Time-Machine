@@ -7,7 +7,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { RigidBody } from '@react-three/rapier'
 
-export function Mountain(props) {
+export function MountainFog(props) {
   // Destructure nodes and materials from the useGLTF hook to load the mountain model
   const { nodes, materials } = useGLTF('/mountainsComp.glb')
   return (
@@ -15,12 +15,12 @@ export function Mountain(props) {
       {/* Create a fixed RigidBody component with hull colliders to represent the mountain */}
       <RigidBody type='fixed' colliders='hull' >
         {/* Define the main mesh for the cliff, using the appropriate geometry and material */}
-        {/* Note: Object_3 and Object_5 have been commented out and are not rendered */}
+        {/* Note: Object_3 has been commented out and is not rendered */}
         {/* <mesh geometry={nodes.Object_3.geometry} material={materials.base} position={[-114.939, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} /> */}
         <mesh geometry={nodes.Object_4.geometry} material={materials.cliff} position={[-114.939, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} />
       </RigidBody>
-      {/* The cloud mesh has been commented out and is not part of the current rendering */}
-      {/* <mesh geometry={nodes.Object_5.geometry} material={materials.cloud} position={[-114.939, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} /> */}
+      {/* Define a separate mesh for the cloud, using the appropriate geometry and material */}
+      <mesh geometry={nodes.Object_5.geometry} material={materials.cloud} position={[-114.939, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} />
     </group>
   )
 }
