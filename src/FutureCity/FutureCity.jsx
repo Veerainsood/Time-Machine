@@ -29,7 +29,7 @@ function FutureCity() {
           ]}>
       <Canvas>
         {/* <SkyCycle /> */}
-        {/* <Stars/> */}
+        <Stars/>
         <ambientLight intensity={1}/> 
         <FPV />
         <Axes/>

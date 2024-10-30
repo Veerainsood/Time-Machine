@@ -19,7 +19,7 @@ const DateSlider = () => {
     if(selectedYear <1500)
       navigate('/Forest'); // Navigate to the '/3D' route
     else if(selectedYear >= 2050)
-      navigate('/FutureCity'); // Navigate to the '/3D' route
+      navigate('/FutureChoice'); // Navigate to the '/3D' route
     else
       navigate('/City'); // Navigate to the '/3D' route
   };

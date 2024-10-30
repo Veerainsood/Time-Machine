@@ -6,13 +6,12 @@ Command: npx gltfjsx@6.5.2 ./public/compressedMachine.glb -o ./src/TT.jsx
 import React,{useEffect, useState} from 'react'
 import { Html, OrbitControls, useGLTF } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber';
-import '../CompCSS/Login.css';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 import firebaseApp from './firebase';
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
 //import { useAuth } from './AuthProvider'; // Adjust the path based on your file structure
-
+import  '../CompCSS/Login.css';
 
 //const auth = getAuth(app);
 //console.log('Auth',auth);
@@ -112,7 +111,7 @@ export default function LoginMachine() {
 
   return (
     <>
-      <link rel="stylesheet" href="../CompCSS/Login.css" />
+     <link rel='stylesheet' href='../CompCSS/Login.css'/>
       <div id="position">
         <div className="wrapper">
           <form onSubmit={handleSubmit}>

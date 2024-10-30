@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import { initializeApp } from 'firebase/app';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
-import { useNavigate } from 'react-router-dom';
-import './style.css'
-import { TimeMachine2 } from '../ForestModels/TimeMachine2';
-import { Physics } from '@react-three/rapier';
-import { OrbitControls } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
+import React, { useState } from 'react'; // Import React and useState hook for managing state
+import { initializeApp } from 'firebase/app'; // Import function to initialize Firebase
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'; // Import authentication functions from Firebase
+import { useNavigate } from 'react-router-dom'; // Import useNavigate hook for navigation
+import './style.css'; // Import CSS for styling
+import { TimeMachine2 } from '../models/TimeMachine2'; // Import the TimeMachine2 model
+import { Physics } from '@react-three/rapier'; // Import Physics for 3D physics simulation
+import { OrbitControls } from '@react-three/drei'; // Import OrbitControls for user interaction
+import { Canvas } from '@react-three/fiber'; // Import Canvas for rendering 3D graphics
+
 // Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBADLgkoSxAj5D6XuL-nG76PAnri8yo5us",
@@ -19,75 +20,77 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+const app = initializeApp(firebaseConfig); // Initialize Firebase app with configuration
+const auth = getAuth(app); // Get Firebase authentication instance
 
 function Register() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const navigate = useNavigate();
+  const [email, setEmail] = useState(''); // State for storing email
+  const [password, setPassword] = useState(''); // State for storing password
+  const navigate = useNavigate(); // Initialize navigation
 
+  // Handle form submission
   const handleSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault(); // Prevent default form submission behavior
 
+    // Create a user with email and password
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed up successfully
-        const user = userCredential.user;
-        alert('Account created successfully!');
+        const user = userCredential.user; // Get user object
+        alert('Account created successfully!'); // Alert success message
         // Navigate to the desired page after successful registration
-        navigate('/NavigationPage');
+        navigate('/NavigationPage'); // Redirect to NavigationPage
       })
       .catch((error) => {
         // Handle errors here
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        alert(`Error: ${errorMessage} (${errorCode})`);
+        const errorCode = error.code; // Get error code
+        const errorMessage = error.message; // Get error message
+        alert(`Error: ${errorMessage} (${errorCode})`); // Alert error message
       });
   };
 
   return (
-    <div id="position">
-      <div className="wrapper">
-        <form onSubmit={handleSubmit}>
-          <h2>Register</h2>
-          <div className="input-field">
+    <div id="position"> {/* Main container for registration form */}
+      <div className="wrapper"> {/* Wrapper for styling */}
+        <form onSubmit={handleSubmit}> {/* Form submission handler */}
+          <h2>Register</h2> {/* Registration title */}
+          <div className="input-field"> {/* Email input field */}
             <input
               type="email"
               id="email"
               value={email}
               placeholder='Enter Your Email'
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)} // Update email state on change
               required
             />
           </div>
-          <div className="input-field">
+          <div className="input-field"> {/* Password input field */}
             <input
               type="password"
               id="password"
               value={password}
               placeholder='Enter Your Password'
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)} // Update password state on change
               required
             />
           </div>
-          <div className="forget">
+          <div className="forget"> {/* Remember me checkbox */}
             <label htmlFor="remember">
               <input type="checkbox" id="remember" />
-              <p>Remember me</p>
+              <p>Remember me</p> {/* Label for checkbox */}
             </label>
           </div>
-          <button id="submit" type="submit">Register</button>
+          <button id="submit" type="submit">Register</button> {/* Submit button */}
         </form>
       </div>
-      <div id="canva">
-          <Canvas>
-            <ambientLight intensity={3} />
-            <pointLight position={[10, 10, 10]} />
-            <Physics>
-            <TimeMachine2 scale={[0.4, 0.4, 0.4]} />
+      <div id="canva"> {/* Container for 3D Canvas */}
+          <Canvas> {/* Initialize Canvas for 3D rendering */}
+            <ambientLight intensity={3} /> {/* Ambient light for scene illumination */}
+            <pointLight position={[10, 10, 10]} /> {/* Point light source */}
+            <Physics> {/* Physics simulation for 3D objects */}
+            <TimeMachine2 scale={[0.4, 0.4, 0.4]} /> {/* Render TimeMachine2 model */}
             </Physics>
-            <OrbitControls autoRotate autoRotateSpeed={1} />
+            <OrbitControls autoRotate autoRotateSpeed={1} /> {/* Controls for orbiting the scene */}
           </Canvas>
         </div>
     </div>
@@ -95,4 +98,4 @@ function Register() {
   );
 };
 
-export default Register;
+export default Register; // Export the Register component

@@ -7,7 +7,10 @@ import NavigationPage from "./Navigation/NavigationPage";
 import SaveForest from "./SaveForest/SaveForest";
 import City from "./ModernCity/City";
 import FutureCity from "./FutureCity/FutureCity";
-import DestroyedCity from "./DestroyedCity/DestroyedCity";
+import { DestroyedCity } from "./DestroyedCity/DistroyedCity";
+import { FutureCity2 } from "./FutureCity2/FutureCity2";
+import FutureChoice from "./Components/SaveFutureOrNot";
+import TwoBrightFutures from "./Components/TwoPossibleFutures";
 
 const router = createBrowserRouter(
   [
@@ -16,7 +19,7 @@ const router = createBrowserRouter(
       element:<Forest/>
     },
     {
-      path:"/DestroyedCity",
+      path:"/Destroyed",
       element:<DestroyedCity/>
     }
     ,
@@ -30,6 +33,11 @@ const router = createBrowserRouter(
     }
     ,
     {
+      path:"/FutureCity2",                                                                             
+      element:<FutureCity2/>
+    }
+    ,
+    {
       path:"/",
       element:<LoginMachine/>
     },
@@ -39,26 +47,37 @@ const router = createBrowserRouter(
     }
     ,
     {
+      path:"/FutureChoice",
+      element:<FutureChoice/>
+    }
+    ,
+    {
+      path:"/TwoBrightFuture",
+      element:<TwoBrightFutures/>
+    }
+    ,
+    {
       path:"/Register",
       element:<Register/>
     }
     ,
     {
-      path:"/NavigationPage",
+      path:"/NavigationPage", // Route for the navigation page
       element:<NavigationPage/>
     }
     ,
     {
-      path:"/SaveForest",
+      path:"/SaveForest", // Route for saving the forest state
       element:<SaveForest/>
     }
   ]
 );
 
+// Main App component to set up routing
 function App(){
     return (
-      <RouterProvider router={router}/>
+      <RouterProvider router={router}/> // Providing the router to handle navigation between components
     )
 }
 
-export default App;
+export default App; // Exporting the App component as default

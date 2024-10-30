@@ -2344,7 +2344,7 @@ export function Future(props) {
       <mesh geometry={nodes._gltfNode_4456.geometry} material={materials['Material.001']} position={[0, 27.033, 0]} />
       <mesh geometry={nodes._gltfNode_4458.geometry} material={materials['Material.001']} position={[0, 27.033, 0]} />
       <RigidBody type='fixed'>
-      <mesh geometry={nodes.Cube.geometry} material={materials.Material} position={[7.007, 31.57, 0]} rotation={[Math.PI / 2, 0, 0]} scale={[222, 100, 1]} />
+      <mesh geometry={nodes.Cube.geometry} material={materials.Material} position={[7.007, 30.57, 0]} rotation={[Math.PI / 2, 0, 0]} scale={[222, 100, 1]} />
       </RigidBody>
     </group>
   )
