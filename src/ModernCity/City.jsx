@@ -34,6 +34,9 @@ import { Gas_pump } from './Models/Gas_pump';
 import { SpanishHouse } from './Models/SpanishHouse';
 import { Vending } from './Models/Vending';
 import { StreetPeople } from './Models/StreetPeopleDining';
+import { LittleKrishna } from './Models/LittleKrishna';
+import { AdultKrishna } from './Models/AdultKrishna';
+import { AdultKrishnaSitting } from './Models/AdultKrishnaSitting';
 
 function City() {  
 //
@@ -90,6 +93,19 @@ function City() {
         <StreetPeople position={[-127,0.3,132]} scale={[2,2,2.5]} rotation={[0,Math.PI/2,0]}/>
         <GreyTheater position ={[25,0.4,190]} rotation={[0, 90, 0]} scale ={[0.8,0.8,0.8]} /> 
         <TheaterBig position ={[15,2,350]} rotation={[0, 0, 0]} scale ={[1.4,1.4,1.4]} />
+        <AdultKrishna scale={[3,3,3]} position={[100,1,15]} rotation={[0,-Math.PI/2,0]} />
+        <AdultKrishna scale={[1,1,1]} position={[-130,1,-10]} rotation={[0,Math.PI/2,0]}/>
+        <LittleKrishna scale={[.2,.2,.2]} position={[40,1,15]} rotation={[0,-Math.PI/2,0]}/>
+        <AdultKrishnaSitting scale={[.13,.13,.13]} position={[-153,0.5,137]} rotation={[0,0,0]} />
+        <AdultKrishnaSitting scale={[.13,.13,.13]} position={[-153,0.5,140.5]} rotation={[0,Math.PI,0]} />
+        <AdultKrishna scale={[.7,.7,.7]} position={[-13,1,178]} rotation={[0,Math.PI,0]}/>
+        <LittleKrishna scale={[.2,.2,.2]} position={[10,1,168]} rotation={[0,Math.PI,0]} />
+        <LittleKrishna scale={[.2,.2,.2]} position={[10,1,271]} rotation={[0,-3*Math.PI/4,0]}/>
+        <AdultKrishna scale={[.2,.2,.2]} position={[-19,1,261]} rotation={[0,-Math.PI/2,0]}/>
+        <AdultKrishna scale={[.2,.2,.2]} position={[-82,1,261]} rotation={[0,Math.PI/2,0]}/>
+        <AdultKrishna scale={[.2,.2,.2]} position={[-82,1,201]} rotation={[0,Math.PI/2,0]}/>
+        <AdultKrishna scale={[.2,.2,.2]} position={[-140,1,141]} rotation={[0,Math.PI/4,0]}/>
+        <AdultKrishna scale={[.2,.2,.2]} position={[-132,1,141]} rotation={[0,Math.PI/2,0]}/>
         <Building_One position ={[-100,0.1,380]} rotation={[0,0,0]} scale ={[0.007,0.007,0.007]} />
         <Modern_VILLA position ={[-70, -1, 50]} rotation={[0,359.7,0]} scale ={[2,2,2]} />
         <pointLight position={[35,10,-20]} intensity={1000} color="#fff" target={new THREE.Vector3(0, 0, -1)} />
