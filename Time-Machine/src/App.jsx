@@ -13,6 +13,16 @@ import TwoBrightFutures from "./Components/TwoPossibleFutures";
 import HomePage from "./HomePage/Home";
 import { DestroyedCity } from "./DestroyedCity/DistroyedCity";
 import Compost_Food_Waste from "./assets/Habbits/compost_food";
+import Eco_friendly_appliance from "./assets/Habbits/eco_freindly_appliances";
+import Eco_friendly_cleaning from "./assets/Habbits/eco_freindly_cleaning";
+import Meetings from "./assets/Habbits/meetings";
+import Natural_Light from "./assets/Habbits/natural_Light";
+import R from "./assets/Habbits/r";
+import Single_use_plastic from "./assets/Habbits/single_use_plastic";
+import Small_Garden from "./assets/Habbits/small_Garden";
+import Unplug from "./assets/Habbits/unplug";
+import Water from "./assets/Habbits/water";
+
 
 const router = createBrowserRouter(
   [
@@ -27,6 +37,42 @@ const router = createBrowserRouter(
     {
       path:"/compost_food",
       element:<Compost_Food_Waste/>
+    },
+    {
+      path:"/unplug",
+      element:<Unplug/>
+    },
+    {
+      path:"/eco_freindly_appliances",
+      element:<Eco_friendly_appliance/>
+    },
+    {
+      path:"/water",
+      element:<Water/>
+    },
+    {
+      path:"/eco_freindly_cleaning",
+      element:<Eco_friendly_cleaning/>
+    },
+    {
+      path:"/meetings",
+      element:<Meetings/>
+    },
+    {
+      path:"/natural_Light",
+      element:<Natural_Light/>
+    },
+    {
+      path:"/r",
+      element:<R/>
+    },
+    {
+      path:"/small_Garden",
+      element:<Small_Garden/>
+    },
+    {
+      path:"/single_use_plastic",
+      element:<Single_use_plastic/>
     },
     {
       path:"/Destroyed",
