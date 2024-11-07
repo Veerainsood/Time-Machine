@@ -1,0 +1,106 @@
+.position {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+   /* Ensure the container does not stretch too wide */
+  background-image: url('./Background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  width: 600px;
+  height: 600px;
+  margin-left: 20%;
+  padding-bottom: 10px;
+  border-radius: 18px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(175, 168, 168, 0.51);
+  backdrop-filter: blur(8px);
+  display: block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border-radius: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  margin-bottom: 35px;
+  margin-top: 35px;
+  outline: none;
+  font-size: 20px;
+  color: #fff;
+}
+
+.forget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0 35px 0;
+  color: #fff;
+}
+
+.remember {
+  height: 50px;
+  width: 50px;
+  accent-color: #fff;
+}
+
+.wrapper a {
+  color: #efefef;
+  text-decoration: none;
+}
+
+.wrapper a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.register {
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
+}
+
+/* Canvas Styling */
+.canvas {
+  justify-content: center;
+  width: 600px;
+  height: 800px;
+}
+
