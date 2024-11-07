@@ -7,16 +7,21 @@ import NavigationPage from "./Navigation/NavigationPage";
 import SaveForest from "./SaveForest/SaveForest";
 import City from "./ModernCity/City";
 import FutureCity from "./FutureCity/FutureCity";
-import { DestroyedCity } from "./DestroyedCity/DistroyedCity";
 import { FutureCity2 } from "./FutureCity2/FutureCity2";
 import FutureChoice from "./Components/SaveFutureOrNot";
 import TwoBrightFutures from "./Components/TwoPossibleFutures";
+import HomePage from "./HomePage/Home";
+import { DestroyedCity } from "./DestroyedCity/DistroyedCity";
 
 const router = createBrowserRouter(
   [
     {
       path:"/Forest",
       element:<Forest/>
+    },
+    {
+      path:"/",
+      element:<HomePage/>
     },
     {
       path:"/Destroyed",
@@ -38,7 +43,7 @@ const router = createBrowserRouter(
     }
     ,
     {
-      path:"/",
+      path:"/Login",
       element:<LoginMachine/>
     },
     {

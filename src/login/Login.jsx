@@ -11,7 +11,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import firebaseApp from './firebase';
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
 //import { useAuth } from './AuthProvider'; // Adjust the path based on your file structure
-import  '../CompCSS/Login.css';
+import styles from './Login.module.css';
 
 //const auth = getAuth(app);
 //console.log('Auth',auth);
@@ -109,48 +109,44 @@ export default function LoginMachine() {
     navigate('/NavigationPage');
   }
 
-  return (
+  return  (
     <>
-     <link rel='stylesheet' href='../CompCSS/Login.css'/>
-      <div id="position">
-        <div className="wrapper">
+      <div className={styles.position}>
+        <div className={styles.wrapper}>
           <form onSubmit={handleSubmit}>
-            <h2>Login</h2>
-            <div className="input-field">
-              <input 
-                id="email" 
-                type="email" 
+            <h2 className={styles.h2}>Login</h2>
+            <div className={styles.inputField}>
+              <input
+                id="email"
+                type="email"
                 placeholder='Enter Your Email'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}  // Set email state
-                required 
+                required
+                className={styles.input}
               />
             </div>
-            <div className="input-field">
-              <input 
-                id="password" 
-                type="password" 
+            <div className={styles.inputField}>
+              <input
+                id="password"
+                type="password"
                 placeholder='Enter Your Password'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}  // Set password state
-                required 
+                required
+                className={styles.input}
               />
             </div>
-            <div className="forget">
-              <label htmlFor="remember">
-                <input type="checkbox" id="remember" />
-                <p>Remember me</p>
-              </label>
+            <button id="submit" type="submit" className={styles.button}>Log In</button>
+            <div className={styles.register}>
+              <p>Don't have an account? <a href="/Register" className={styles.link}>Register</a></p>
             </div>
-            <button id="submit" type="submit" >Log In</button>
-            <div className="register">
-              <p>Don't have an account? <a href="/Register">Register</a></p>
-            </div>
-            <button id="Guest" onClick={handleGuestClick}>Continue As Guest</button>
+            <button id="Guest" onClick={handleGuestClick} className={styles.button}>Continue As Guest</button>
           </form>
         </div>
+
         {/* Three.js Canvas */}
-        <div id="canva">
+        <div className={styles.canvas}>
           <Canvas>
             <ambientLight intensity={3} />
             <pointLight position={[10, 10, 10]} />

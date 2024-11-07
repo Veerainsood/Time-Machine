@@ -2,7 +2,7 @@ import React, { useState } from 'react'; // Import React and useState hook for m
 import { initializeApp } from 'firebase/app'; // Import function to initialize Firebase
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'; // Import authentication functions from Firebase
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook for navigation
-import './style.css'; // Import CSS for styling
+import styles from './style.module.css';
 import { TimeMachine2 } from '../models/TimeMachine2'; // Import the TimeMachine2 model
 import { Physics } from '@react-three/rapier'; // Import Physics for 3D physics simulation
 import { OrbitControls } from '@react-three/drei'; // Import OrbitControls for user interaction
@@ -50,51 +50,52 @@ function Register() {
   };
 
   return (
-    <div id="position"> {/* Main container for registration form */}
-      <div className="wrapper"> {/* Wrapper for styling */}
-        <form onSubmit={handleSubmit}> {/* Form submission handler */}
-          <h2>Register</h2> {/* Registration title */}
-          <div className="input-field"> {/* Email input field */}
-            <input
-              type="email"
-              id="email"
-              value={email}
-              placeholder='Enter Your Email'
-              onChange={(e) => setEmail(e.target.value)} // Update email state on change
-              required
-            />
-          </div>
-          <div className="input-field"> {/* Password input field */}
-            <input
-              type="password"
-              id="password"
-              value={password}
-              placeholder='Enter Your Password'
-              onChange={(e) => setPassword(e.target.value)} // Update password state on change
-              required
-            />
-          </div>
-          <div className="forget"> {/* Remember me checkbox */}
-            <label htmlFor="remember">
-              <input type="checkbox" id="remember" />
-              <p>Remember me</p> {/* Label for checkbox */}
-            </label>
-          </div>
-          <button id="submit" type="submit">Register</button> {/* Submit button */}
-        </form>
-      </div>
-      <div id="canva"> {/* Container for 3D Canvas */}
-          <Canvas> {/* Initialize Canvas for 3D rendering */}
-            <ambientLight intensity={3} /> {/* Ambient light for scene illumination */}
-            <pointLight position={[10, 10, 10]} /> {/* Point light source */}
-            <Physics> {/* Physics simulation for 3D objects */}
-            <TimeMachine2 scale={[0.4, 0.4, 0.4]} /> {/* Render TimeMachine2 model */}
-            </Physics>
-            <OrbitControls autoRotate autoRotateSpeed={1} /> {/* Controls for orbiting the scene */}
-          </Canvas>
+    <>
+    <div className={styles.position}>
+    <div className={styles.wrapper}> {/* Use styles.wrapper here */}
+      <form onSubmit={handleSubmit}>
+        <h2>Register</h2>
+        <div className={styles['input-field']}> {/* Use styles['input-field'] */}
+          <input
+            type="email"
+            id="email"
+            value={email}
+            placeholder='Enter Your Email'
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
         </div>
+        <div className={styles['input-field']}> {/* Use styles['input-field'] */}
+          <input
+            type="password"
+            id="password"
+            value={password}
+            placeholder='Enter Your Password'
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <div className={styles.forget}> {/* Use styles.forget */}
+          <label htmlFor="remember">
+            <input type="checkbox" id="remember" />
+            <p>Remember me</p>
+          </label>
+        </div>
+        <button id="submit" type="submit">Register</button>
+      </form>
     </div>
-    
+    <div className={styles.canvas}>
+        <Canvas>
+          <ambientLight intensity={3} />
+          <pointLight position={[10, 10, 10]} />
+          <Physics>
+          <TimeMachine2 scale={[0.4, 0.4, 0.4]} />
+          </Physics>
+          <OrbitControls autoRotate autoRotateSpeed={1} />
+        </Canvas>
+      </div>
+      </div>
+    </>
   );
 };
 

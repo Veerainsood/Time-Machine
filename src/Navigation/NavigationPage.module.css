@@ -1,0 +1,12 @@
+/* NavigationPage.module.css */
+.canvasContainer {
+  height: 100vh; /* Make sure the container takes the full screen height */
+  width: 100%;   /* Full width */
+  position: relative;
+}
+
+.canvas {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}

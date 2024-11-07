@@ -10,13 +10,12 @@ import { Loader, PointerLockControls, Stars } from '@react-three/drei';
 import { Suspense } from "react"
 import { KeyboardControls } from '@react-three/drei';
 import { Axes } from '../Components/AxesHelper';
-import "../FutureCity/FutureCity.css"
+import styles from "../FutureCity/FutureCity.module.css"
 import { Cityscape } from './Models/CityScape';
 
 export function FutureCity2() {  
   return (
     <>    
-    <link rel='stylesheet' href='../FutureCity/FutureCity.css'></link>
       <Suspense>
       <KeyboardControls
           map={[
@@ -26,8 +25,8 @@ export function FutureCity2() {
             { name: "right", keys: ["ArrowRight", "d", "D"] },
             { name: "jump", keys: ["Space"] },
           ]}>
+      <div className={styles.canvas}>
       <Canvas>
-        {/* <SkyCycle /> */}
         <Stars />
         <ambientLight intensity={1}/> 
         <FPV />
@@ -50,10 +49,10 @@ export function FutureCity2() {
         </Physics>
       <PointerLockControls />
       </Canvas>
+      </div>
       </KeyboardControls>
       <Loader />
       </Suspense>    
-      <div className='absolute centered cursor'>+</div>  
     </>
   );
 }

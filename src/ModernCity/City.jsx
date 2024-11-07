@@ -11,7 +11,6 @@ import { Loader, PointerLockControls } from '@react-three/drei';
 import { Suspense } from "react"
 import { KeyboardControls } from '@react-three/drei';
 import { Axes } from '../Components/AxesHelper';
-import "../../src/CompCSS/ThreeD.css"
 import { CityModel2 } from './Models/CityModel2';
 import { Market } from './Models/SuperMarket';
 import { Building_One } from './Models/Building_One';
@@ -43,10 +42,6 @@ function City() {
 
   return (
     <>    
-  
-    <link rel='stylesheet' href='../src/CompCSS/ThreeD.css'></link>
-
-  
       <Suspense>
       <KeyboardControls
           map={[
