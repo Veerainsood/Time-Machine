@@ -328,10 +328,10 @@ header
 
 .header-area .main-nav .nav li a {
   display: block;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 700;
+  font-size: 20px;
   text-transform: uppercase;
-  color: #fff;
+  color: #1a0b0b;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;

@@ -15,35 +15,30 @@ export default function Compost_Food_Waste(){
                     {/* ***** Logo End ***** */}
                     {/* ***** Menu Start ***** */}
                     <ul className="nav">
-                    <li>
-                        <a href="index.html">Home</a>
+                  <li className="scroll-to-section">
+                      <a href="./" className="active">
+                        Home
+                      </a>
                     </li>
-                    <li>
-                        <a href="meetings.html" className="active">
-                        Practices
-                        </a>
+                    <li className="scroll-to-section">
+                        <a href="./EduVids">Videos</a>
                     </li>
-                    <li>
-                        <a href="index.html">Apply Now</a>
+                    <li className="scroll-to-section">
+                      <a href="../assets/shop/index_2.html">Shop</a>
                     </li>
-                    <li className="has-sub">
-                        <a href="javascript:void(0)">Pages</a>
-                        <ul className="sub-menu">
-                        <li>
-                            <a href="meetings.html">Upcoming Meetings</a>
-                        </li>
-                        <li>
-                            <a href="meeting-details.html">Meeting Details</a>
-                        </li>
-                        </ul>
+                    <li className="scroll-to-section">
+                      <a href="./Login">3D</a>
                     </li>
-                    <li>
-                        <a href="index.html">Courses</a>
+                    <li className="scroll-to-section">
+                      <a href="#courses">Information</a>
                     </li>
-                    <li>
-                        <a href="index.html">Contact Us</a>
+                    <li className="scroll-to-section">
+                      <a href="#contact">Contact Us</a>
                     </li>
-                    </ul>
+                  <a className="menu-trigger">
+                    <span>Menu</span>
+                  </a>
+                </ul>
                     <a className="menu-trigger">
                     <span>Menu</span>
                     </a>

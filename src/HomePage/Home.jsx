@@ -19,48 +19,51 @@ export default function HomePage(){
         <link rel="stylesheet" href="../assets/css/templatemo-edu-meeting.css" />
         <link rel="stylesheet" href="../assets/css/owl.css" />
         <link rel="stylesheet" href="../assets/css/lightbox.css" />
-        <header className="header-area header-sticky">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <nav className="main-nav">
-                  {/* ***** Logo Start ***** */}
-                  <a href="index.html" className="logo">
-                    Save Nature
-                  </a>
-                  {/* ***** Logo End ***** */}
-                  {/* ***** Menu Start ***** */}
-                  <ul className="nav">
-                    <li className="scroll-to-section">
-                      <a href="#top" className="active">
-                        Home
-                      </a>
-                    </li>
-                    <li className="scroll-to-section">
-                        <a href="./EduVids">Videos</a>
-                    </li>
-                    <li className="scroll-to-section">
-                      <a href="../assets/shop/index_2.html">Shop</a>
-                    </li>
-                    <li className="scroll-to-section">
-                      <a href="./Login">3D</a>
-                    </li>
-                    <li className="scroll-to-section">
-                      <a href="#courses">Information</a>
-                    </li>
-                    <li className="scroll-to-section">
-                      <a href="#contact">Contact Us</a>
-                    </li>
-                  </ul>
-                  <a className="menu-trigger">
-                    <span>Menu</span>
-                  </a>
-                  {/* ***** Menu End ***** */}
-                </nav>
-              </div>
-            </div>
-          </div>
-        </header>
+        <header className="header-area header-sticky background-header">
+  <div className="container">
+    <div className="row">
+      <div className="col-12">
+        <nav className="main-nav">
+          {/* ***** Logo Start ***** */}
+          <a href="../index" className="logo">
+            Nature Saving Ideas
+          </a>
+          {/* ***** Logo End ***** */}
+          {/* ***** Menu Start ***** */}
+          <ul className="nav">
+                <li className="scroll-to-section">
+                    <a href="./" className="active">
+                      Home
+                    </a>
+                  </li>
+                  <li className="scroll-to-section">
+                      <a href="./EduVids">Videos</a>
+                  </li>
+                  <li className="scroll-to-section">
+                    <a href="../assets/shop/index_2">Shop</a>
+                  </li>
+                  <li className="scroll-to-section">
+                    <a href="./Login">3D</a>
+                  </li>
+                  <li className="scroll-to-section">
+                    <a href="#courses">Information</a>
+                  </li>
+                  <li className="scroll-to-section">
+                    <a href="#contact">Contact Us</a>
+                  </li>
+                <a className="menu-trigger">
+                  <span>Menu</span>
+                </a>
+          </ul>
+          <a className="menu-trigger">
+            <span>Menu</span>
+          </a>
+          {/* ***** Menu End ***** */}
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
         {/* ***** Header Area End ***** */}
         {/* ***** Main Banner Area Start ***** */}
     <section className="section main-banner" id="top" data-section="section1">
@@ -208,7 +211,7 @@ export default function HomePage(){
                     </li>
                   </ul>
                   <div className="main-button-red">
-                    <a href="Habbits/meetings.html">See More Ideas</a>
+                    <a href="./meetings">See More Ideas</a>
                   </div>
                 </div>
               </div>
@@ -217,10 +220,12 @@ export default function HomePage(){
                   <div className="col-lg-6">
                     <div className="meeting-item">
                       <div className="thumb">
+                        <a href="./r">
                           <img src="../../public/5R.jpeg" alt="" />
+                          </a>
                       </div>
                       <div className="down-content">
-                        <a href="Habbits/r.html">
+                        <a href="./r">
                           <h4>5R's</h4>
                         </a>
                         <p>
@@ -234,12 +239,12 @@ export default function HomePage(){
                   <div className="col-lg-6">
                     <div className="meeting-item">
                       <div className="thumb">
-                        <a href="Habbits/water.html">
-                          <img src="../../public/water.jpeg" alt="" />
+                        <a href="./Water">
+                          <img src="../../public/water.jpeg"/>
                         </a>
                       </div>
                       <div className="down-content">
-                        <a href="Habbits/water.html">
+                        <a href="./Water">
                           <h4>Conserve Water</h4>
                         </a>
                         <p>
@@ -255,12 +260,12 @@ export default function HomePage(){
                   <div className="col-lg-6">
                     <div className="meeting-item">
                       <div className="thumb">
-                        <a href="Habbits/single_use_plastic.html">
+                        <a href="./single_use_plastic">
                           <img src="../../public/SingleUsePlasric.jpeg" alt="" />
                         </a>
                       </div>
                       <div className="down-content">
-                        <a href="Habbits/single_use_plastic.html">
+                        <a href="./single_use_plastic">
                           <h4>Reduce Single-Use Plastic</h4>
                         </a>
                         <p>
@@ -274,12 +279,12 @@ export default function HomePage(){
                   <div className="col-lg-6">
                     <div className="meeting-item">
                       <div className="thumb">
-                        <a href="Habbits/compost_food.html">
+                        <a href="./compost_food">
                           <img src="../../public/Compost_Food_Waste.jpeg" alt="" />
                         </a>
                       </div>
                       <div className="down-content">
-                        <a href="Habbits/compost_food.html">
+                        <a href="./compost_food">
                           <h4>Compost Food Waste</h4>
                         </a>
                         <p>

@@ -15,14 +15,13 @@ import { DestroyedCity } from "./DestroyedCity/DistroyedCity";
 import Compost_Food_Waste from "./assets/Habbits/compost_food";
 import Eco_friendly_appliance from "./assets/Habbits/eco_freindly_appliances";
 import Eco_friendly_cleaning from "./assets/Habbits/eco_freindly_cleaning";
-import Meetings from "./assets/Habbits/meetings";
 import Natural_Light from "./assets/Habbits/natural_Light";
 import R from "./assets/Habbits/r";
 import Single_use_plastic from "./assets/Habbits/single_use_plastic";
 import Small_Garden from "./assets/Habbits/small_Garden";
 import Unplug from "./assets/Habbits/unplug";
 import Water from "./assets/Habbits/water";
-import EduVids from "../../src/HomePage/EduVids";
+import EduVids from "./HomePage/EduVids";
 
 
 const router = createBrowserRouter(
@@ -58,10 +57,6 @@ const router = createBrowserRouter(
     {
       path:"/eco_freindly_cleaning",
       element:<Eco_friendly_cleaning/>
-    },
-    {
-      path:"/meetings",
-      element:<Meetings/>
     },
     {
       path:"/natural_Light",
