@@ -31,7 +31,7 @@ import { MountainFog } from './MountainFog'; // Fog effect for mountains
 function Forest() {  
   return (
     <>    
-    <link rel='stylesheet' href='../src/CompCSS/ThreeD.css'></link> // Linking external CSS
+
       <Suspense> // Suspense to ensure components load before rendering
       <KeyboardControls
           map={[

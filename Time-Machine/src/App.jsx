@@ -12,6 +12,7 @@ import FutureChoice from "./Components/SaveFutureOrNot";
 import TwoBrightFutures from "./Components/TwoPossibleFutures";
 import HomePage from "./HomePage/Home";
 import { DestroyedCity } from "./DestroyedCity/DistroyedCity";
+import Compost_Food_Waste from "./assets/Habbits/compost_food";
 
 const router = createBrowserRouter(
   [
@@ -22,6 +23,10 @@ const router = createBrowserRouter(
     {
       path:"/",
       element:<HomePage/>
+    },
+    {
+      path:"/compost_food",
+      element:<Compost_Food_Waste/>
     },
     {
       path:"/Destroyed",

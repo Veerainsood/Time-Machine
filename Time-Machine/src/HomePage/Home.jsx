@@ -11,68 +11,6 @@ import "../assets/images/service-icon-03.png"
 import "../assets/images/5R.jpeg"
 
 export default function HomePage(){
-    //     // State to track the active section
-    // const [activeSection, setActiveSection] = useState('#top');
-
-    // // Scroll to a specific section
-    // const scrollToSection = (sectionId, isAnimate) => {
-    //     // Remove the '#' from the sectionId (direction)
-    //     const direction = sectionId.replace(/#/, '');
-        
-    //     // Find the section based on data-section attribute
-    //     const reqSection = document.querySelector(`[data-section="${direction}"]`);
-        
-    //     if (reqSection) {
-    //     const reqSectionPos = reqSection.offsetTop - 80; // Adjust for header offset (if any)
-        
-    //     if (isAnimate) {
-    //         // Scroll with animation
-    //         window.scrollTo({
-    //         top: reqSectionPos,
-    //         behavior: 'smooth', // Smooth scrolling
-    //         });
-    //     } else {
-    //         // Instant scroll
-    //         window.scrollTo({
-    //         top: reqSectionPos,
-    //         behavior: 'auto', // Instant scroll
-    //         });
-    //     }
-    //     }
-    // };
-    
-    // // Scroll handler to check which section is active based on scroll position
-    // const checkActiveSection = () => {
-    //     const sections = document.querySelectorAll('.section');
-    //     const scrollPosition = window.scrollY;
-    
-    //     sections.forEach((section) => {
-    //     const topEdge = section.offsetTop - 80; // Adjust for any header offset
-    //     const bottomEdge = topEdge + section.offsetHeight;
-    
-    //     if (scrollPosition >= topEdge && scrollPosition < bottomEdge) {
-    //         setActiveSection(`#${section.id}`);
-    //     }
-    //     });
-    // };
-    
-    // // Debounce the scroll event to avoid too many updates during scrolling
-    // const debounceScroll = (func, delay) => {
-    //     let timeout;
-    //     return () => {
-    //     clearTimeout(timeout);
-    //     timeout = setTimeout(() => func(), delay);
-    //     };
-    // };
-    
-    // // Set up scroll event listener
-    // useEffect(() => {
-    //     const debouncedCheckActiveSection = debounceScroll(checkActiveSection, 100);
-    //     window.addEventListener('scroll', debouncedCheckActiveSection);
-    //     return () => {
-    //     window.removeEventListener('scroll', debouncedCheckActiveSection);
-    //     }; // Cleanup on unmount
-    // }, []);
 
     return (
         <>
