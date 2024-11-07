@@ -15,7 +15,7 @@ export default function EduVids(){
             {/* ***** Menu Start ***** */}
             <ul className="nav">
               <li className="scroll-to-section">
-                <a href="index.html">Home</a>
+                <a href="./">Home</a>
               </li>
               <li>
                 <a href="#top" className="active">
@@ -26,7 +26,7 @@ export default function EduVids(){
                 <a href="#apply">Shop</a>
               </li>
               <li className="scroll-to-section">
-                <a href="#apply">3D</a>
+                <a href="./Login">3D</a>
               </li>
               <li className="scroll-to-section">
                 <a href="#courses">Information</a>

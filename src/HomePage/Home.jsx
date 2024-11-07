@@ -37,7 +37,7 @@ export default function HomePage(){
                       </a>
                     </li>
                     <li className="scroll-to-section">
-                        <a href="#apply">Videos</a>
+                        <a href="./EduVids">Videos</a>
                     </li>
                     <li className="scroll-to-section">
                       <a href="../assets/shop/index_2.html">Shop</a>
