@@ -749,13 +749,12 @@ progress {
     margin-left: calc(-.5 * var(--bs-gutter-x))
 }
 .row1 {
-    padding-top: 5%;
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    display: inline-block;
-    margin-left: 30%;
-    flex-wrap: wrap;
-    /* margin-top: 10%; */
+    display: flex;          /* Enable flexbox */
+    justify-content: center; /* Center the content horizontally */
+    flex-wrap: wrap;        /* Allow content to wrap */
+    padding-top: 5%;        /* Padding from the top */
+    width: 100%;            /* Ensure it takes the full available width */
+    box-sizing: border-box; /* Include padding and borders in the element's total width and height */
 }
 .row>* {
     flex-shrink: 0;
@@ -837,7 +836,8 @@ progress {
 
 .col-6 {
     flex: 0 0 auto;
-    width: 50%
+    width: 30%;
+    height: 100%;
 }
 
 .col-7 {

@@ -137,11 +137,11 @@ export default function LoginMachine() {
                 className={styles.input}
               />
             </div>
-            <button id="submit" type="submit" className={styles.button}>Log In</button>
+            <button type="submit" className={styles.LoginButton}>Log In</button>
             <div className={styles.register}>
               <p>Don't have an account? <a href="/Register" className={styles.link}>Register</a></p>
             </div>
-            <button id="Guest" onClick={handleGuestClick} className={styles.button}>Continue As Guest</button>
+            <button  onClick={handleGuestClick} className={styles.LoginButton}>Continue As Guest</button>
           </form>
         </div>
 

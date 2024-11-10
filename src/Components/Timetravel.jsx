@@ -25,7 +25,6 @@ const DateTimePicker = () => {
   };
 
   return (
-    <div className={styles.Background}>
     <div className={styles.dateSliderContainer}>
       <div className={styles.date}>Selected Year: {selectedYear}</div>
       <input
@@ -37,7 +36,6 @@ const DateTimePicker = () => {
         className={styles.dateSlider}
       />
       <button className={styles.dateButton} onClick={handleTimeTravelClick}>Time Travel</button>
-    </div>
     </div>
   );
 };

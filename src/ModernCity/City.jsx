@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber';
-import {  useEffect } from 'react';
-import React, { useState } from 'react';
+import React from 'react';
+import { Suspense, useState } from "react";
 import { Physics, RigidBody } from '@react-three/rapier';
 import { Player } from '../Components/Player';
 import { FPV } from '../Components/FPV';
@@ -8,7 +8,6 @@ import { SkyCycle } from '../Components/ChangeDayNight';
 import { TimeMachine2 } from '../ForestModels/TimeMachine2';
 import { EntryCircle } from '../ForestModels/EntryCircle';
 import { Loader, PointerLockControls } from '@react-three/drei';
-import { Suspense } from "react"
 import { KeyboardControls } from '@react-three/drei';
 import { Axes } from '../Components/AxesHelper';
 import { CityModel2 } from './Models/CityModel2';
@@ -36,9 +35,10 @@ import { StreetPeople } from './Models/StreetPeopleDining';
 import { LittleKrishna } from './Models/LittleKrishna';
 import { AdultKrishna } from './Models/AdultKrishna';
 import { AdultKrishnaSitting } from './Models/AdultKrishnaSitting';
-
-function City() {  
-//
+import styles from "./City.module.css"
+export default function City() {  
+  
+  const [showReader,setShowReader] = useState(true);
 
   return (
     <>    
@@ -51,6 +51,21 @@ function City() {
             { name: "right", keys: ["ArrowRight", "d", "D"] },
             { name: "jump", keys: ["Space"] },
           ]}>
+      <div className={styles.canvas}>
+      {showReader && (
+        <div className={styles.readerOverlay}>
+          <p className={styles.specialPara}>
+          With every step taken in disregard, the earth struggles under the weight of neglect, and the forests mourn in silence.<br/> Where once life flourished, now barren land stretches, a reminder of choices left unmade and paths left untended.<br/><br/>
+
+          Each tree that was cut without thought, each river polluted, has left scars upon the land.<br/> The animals have retreated into shadows, the rivers run dry and lifeless, and the skies darken with a haze that dims the once-brilliant sun.<br/> What was once a journey of promise has now turned into a path of despair—a path that reminds all who travel it of a world’s balance forever lost.<br/><br/>
+
+          You have seen the limits of nature's resilience, and now the trust it once extended has faded.<br/> The lands and creatures that once thrived in harmony have withered, their vibrant colors drained.<br/> Remember, the smallest acts of harm—littering a river, ignoring a forest’s needs, failing to protect the creatures within—echo into the distance, affecting more than just the moment.<br/><br/>
+
+          Now, as you walk this desolate path, remember the choices that led here.<br/> You are not just a traveler but a witness to the consequences of disregard, and perhaps, a reminder to others of the fragile balance that sustains all life."<br/><br/>
+          </p>
+          <button className={styles.hideOverlayButton} onClick={()=>{setShowReader(false)}}>Continue</button>
+        </div>
+      )}
       <Canvas>
         <SkyCycle />
         <ambientLight /> 
@@ -115,6 +130,7 @@ function City() {
         </Physics>
       <PointerLockControls />
       </Canvas>
+      </div>
       </KeyboardControls>
       <Loader />
       </Suspense>    
@@ -124,4 +140,3 @@ function City() {
   );
 }
 
-export default City;

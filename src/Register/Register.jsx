@@ -26,6 +26,8 @@ const auth = getAuth(app); // Get Firebase authentication instance
 function Register() {
   const [email, setEmail] = useState(''); // State for storing email
   const [password, setPassword] = useState(''); // State for storing password
+  const [FirstName, setFirstName] = useState(''); // State for storing email
+  const [LastName, setLastName] = useState(''); // State for storing password
   const navigate = useNavigate(); // Initialize navigation
 
   // Handle form submission
@@ -57,6 +59,24 @@ function Register() {
         <h2>Register</h2>
         <div className={styles['input-field']}> {/* Use styles['input-field'] */}
           <input
+            id="name"
+            value={FirstName}
+            placeholder='Enter Your First Name'
+            onChange={(e) => setFirstName(e.target.value)}
+            required
+          />
+        </div>
+        <div className={styles['input-field']}> {/* Use styles['input-field'] */}
+          <input
+            id="name"
+            value={LastName}
+            placeholder='Enter Your Last Name'
+            onChange={(e) => setLastName(e.target.value)}
+            required
+          />
+        </div>
+        <div className={styles['input-field']}> {/* Use styles['input-field'] */}
+          <input
             type="email"
             id="email"
             value={email}
@@ -75,16 +95,10 @@ function Register() {
             required
           />
         </div>
-        <div className={styles.forget}> {/* Use styles.forget */}
-          <label htmlFor="remember">
-            <input type="checkbox" id="remember" />
-            <p>Remember me</p>
-          </label>
-        </div>
-        <button id="submit" type="submit">Register</button>
+        <button className={styles.RegButton} type="submit">Register</button>
       </form>
     </div>
-    <div className={styles.canvas}>
+    <div className={styles.canvaReg}>
         <Canvas>
           <ambientLight intensity={3} />
           <pointLight position={[10, 10, 10]} />
@@ -93,8 +107,8 @@ function Register() {
           </Physics>
           <OrbitControls autoRotate autoRotateSpeed={1} />
         </Canvas>
-      </div>
-      </div>
+    </div>
+  </div>
     </>
   );
 };

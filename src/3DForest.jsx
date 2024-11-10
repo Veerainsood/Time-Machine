@@ -10,7 +10,7 @@ import { TimeMachine2 } from './models/TimeMachine2'; // 3D model of a time mach
 import { Hindu } from './models/HinduTempleModel'; // 3D model of a Hindu temple
 import { EntryCircle } from './models/EntryCircle'; // 3D model for entry circles in the scene
 import { Loader, PointerLockControls } from '@react-three/drei'; // Loader for assets and pointer lock controls for better FPS experience
-import { Suspense } from "react"; // Suspense component to delay rendering until components are ready
+import { Suspense, useState } from "react"; // Suspense component to delay rendering until components are ready
 import { KeyboardControls } from '@react-three/drei'; // For configuring keyboard controls
 import { Hut } from './models/Hut'; // 3D model of a hut
 import { Axes } from './Components/AxesHelper'; // Helper for displaying axes
@@ -23,32 +23,51 @@ import { FaunaGen } from './Components/FaunaGenerator'; // Component to generate
 import { CarryCart } from './models/Cart1'; // Alternative cart model
 
 // Importing CSS for 3D environment
-import "../src/CompCSS/ThreeD.css";
+import styles from "../src/CompCSS/ThreeD.module.css";
 import { Mountain } from './Mountain'; // Mountain 3D model
 import { MountainFog } from './MountainFog'; // Fog effect for mountains
 
 // Function to render the 3D forest environment
 function Forest() {  
+  const [showReader,setShowReader] = useState(true);
   return (
     <>    
-
-      <Suspense> // Suspense to ensure components load before rendering
+     <Suspense>
       <KeyboardControls
           map={[
-            { name: "forward", keys: ["ArrowUp", "w", "W"] }, // Mapping keys for moving forward
-            { name: "backward", keys: ["ArrowDown", "s", "S"] }, // Mapping keys for moving backward
-            { name: "left", keys: ["ArrowLeft", "a", "A"] }, // Mapping keys for moving left
-            { name: "right", keys: ["ArrowRight", "d", "D"] }, // Mapping keys for moving right
-            { name: "jump", keys: ["Space"] }, // Mapping key for jumping
+            { name: "forward", keys: ["ArrowUp", "w", "W"] }, 
+            { name: "backward", keys: ["ArrowDown", "s", "S"] },
+            { name: "left", keys: ["ArrowLeft", "a", "A"] }, 
+            { name: "right", keys: ["ArrowRight", "d", "D"] },
+            { name: "jump", keys: ["Space"] },
           ]}>
+      <div className={styles.canvas}>
+      {showReader && (
+        <div className={styles.readerOverlay}>
+          <p className={styles.specialPara}>
+          In the beginning, the world was a vast, lush forest, stretching as far as the eye could see.<br/> Towering trees, rich with life, covered the land, and rivers flowed freely through valleys, nourishing all living things.<br/><br/>
+
+          This was a world in perfect harmony—nature’s intricate balance holding everything together.<br/> The creatures of the earth lived in peace, and the air was pure, untouched by human hands.<br/><br/>
+
+          But now, you stand at the dawn of a new era—a time when humanity is beginning to shape the world with its hands.<br/> The forests are yours to explore, but they are also yours to protect—or destroy.<br/><br/>
+
+          The choices you make will determine the future of this lush land.<br/> If you take too much, if you disregard the delicate balance, the beauty around you may be lost forever.<br/><br/>
+
+          You have the power to preserve this world or bring about its downfall.<br/> The forests, rivers, and creatures depend on your actions.<br/><br/>
+
+          Choose wisely, for the path you carve today will echo throughout history. Will you honor the world that nurtures you, or will you let greed and carelessness shape the future? The fate of all life hangs in the balance.
+          </p>
+          <button className={styles.hideOverlayButton} onClick={()=>{setShowReader(false)}}>Continue</button>
+        </div>
+      )}
       <Canvas>
-        <SkyCycle /> // Adding sky cycle for day-night transition
-        <ambientLight /> // Adding ambient light to the scene
-        <FPV /> // Setting up the first-person view
-        <Axes/> // Displaying axes for orientation
-        <Physics gravity={[0, -10, 0]} debug> // Physics engine with gravity applied
-        <Player /> // Adding the player component for interaction        
-        <TimeMachine2 position={[40, 0,9]} rotation={[0, Math.PI/2, 0]} scale={[.5, .5, .5]}/> // Positioning and scaling the time machine model
+        <SkyCycle />
+        <ambientLight /> 
+        <FPV /> 
+        <Axes/> 
+        <Physics gravity={[0, -10, 0]} debug> 
+        <Player /> 
+        <TimeMachine2 position={[40, 0,9]} rotation={[0, Math.PI/2, 0]} scale={[.5, .5, .5]}/> 
         <RigidBody
             sensor
             type="fixed"
@@ -57,7 +76,7 @@ function Forest() {
               window.open("/timeTravel","_top");        
             }}
           >
-        <EntryCircle position={[40, 0, 14]} rotation={[0, Math.PI/2, 0]} scale={[.5, .1, .5]}/> // Positioning and scaling entry circle
+        <EntryCircle position={[40, 0, 14]} rotation={[0, Math.PI/2, 0]} scale={[.5, .1, .5]}/> 
         </RigidBody>
         <RigidBody
             sensor
@@ -67,19 +86,19 @@ function Forest() {
               window.open("/NavigationPage","_top");        
             }}
           >
-        <EntryCircle position={[-21, 7, 27]} rotation={[0, Math.PI/2, 0]} scale={[.5, .1, .5]}/> // Positioning and scaling another entry circle
+        <EntryCircle position={[-21, 7, 27]} rotation={[0, Math.PI/2, 0]} scale={[.5, .1, .5]}/> 
         </RigidBody>
         <ForestGen /> // Generating forest elements
         <FaunaGen /> // Generating fauna elements
-        <Hindu position={[30, 0, 40]} rotation={[0, Math.PI / 2, 0]} scale={[1, 1, 1]}/> // Positioning and scaling the Hindu temple model
-        <Pond position={[-69, -3.2, 10]} rotation={[-Math.PI/26, -Math.PI / 2, -Math.PI/15]} scale={[.05, .05, .05]} /> // Positioning and scaling the pond
+        <Hindu position={[30, 0, 40]} rotation={[0, Math.PI / 2, 0]} scale={[1, 1, 1]}/> 
+        <Pond position={[-69, -3.2, 10]} rotation={[-Math.PI/26, -Math.PI / 2, -Math.PI/15]} scale={[.05, .05, .05]} /> 
         <Ground position={[0,0,0]}/> // Ground component
-        <Hut position={[-30, 1.5, 27]} rotation={[0, Math.PI / 2, 0]} scale={[1.7,1.7,1.7]}/> // Positioning and scaling the hut
-        <Cart position={[-15, 0, 39]} rotation={[0, Math.PI/2 , 0]} scale={[.3,.3,.3]}/>  // Positioning and scaling the cart
-        <CarryCart position={[-10, 0, 39]} rotation={[0, -Math.PI , 0]} scale={[1,1,1]}/> // Positioning and scaling an alternative cart
-        <Mountain position={[75, -15, 15]} rotation={[0, -Math.PI/2 , 0]} scale={[1.5,1.5,1.5]} /> // Positioning and scaling a mountain
-        <MountainFog position={[90, -25, 20]} rotation={[0, Math.PI/2 , 0]} scale={[2,2,2]} /> // Adding fog around mountain
-        <MountainFog position={[69, -10, -34]} rotation={[0, Math.PI/2 , 0]} scale={[1,1,1]} /> // Additional fog placement
+        <Hut position={[-30, 1.5, 27]} rotation={[0, Math.PI / 2, 0]} scale={[1.7,1.7,1.7]}/> 
+        <Cart position={[-15, 0, 39]} rotation={[0, Math.PI/2 , 0]} scale={[.3,.3,.3]}/> 
+        <CarryCart position={[-10, 0, 39]} rotation={[0, -Math.PI , 0]} scale={[1,1,1]}/>
+        <Mountain position={[75, -15, 15]} rotation={[0, -Math.PI/2 , 0]} scale={[1.5,1.5,1.5]} />
+        <MountainFog position={[90, -25, 20]} rotation={[0, Math.PI/2 , 0]} scale={[2,2,2]} /> 
+        <MountainFog position={[69, -10, -34]} rotation={[0, Math.PI/2 , 0]} scale={[1,1,1]} /> 
         <MountainFog position={[-25, -15, -60]} rotation={[0, 3*Math.PI/4 , 0]} scale={[1,1,1]} />   
         <MountainFog position={[39, -20, -60]} rotation={[0, 3*Math.PI/4 , 0]} scale={[2,2,2]} />   
         <MountainFog position={[-55, -15, -40]} rotation={[0, 3*Math.PI/4 , 0]} scale={[1,1,1]} />  
@@ -89,12 +108,13 @@ function Forest() {
         <Mountain position={[35, -30, 105]} rotation={[0, Math.PI/2, 0]} scale={[2,2,2]} />  
         <Mountain position={[-45, -20, 105]} rotation={[0, Math.PI/2, 0]} scale={[2,2,2]} />  
         </Physics>
-      <PointerLockControls /> // Enables pointer lock for better navigation
+      <PointerLockControls />
       </Canvas>
+      </div>
       </KeyboardControls>
-      <Loader /> // Loader to show while assets are being loaded
+      <Loader /> 
       </Suspense>    
-      <div className='absolute centered cursor'>+</div> // Custom cursor in the center of the screen
+      <div className='absolute centered cursor'>+</div> 
     </>
   );
 }

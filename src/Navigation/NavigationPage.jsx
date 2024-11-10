@@ -7,8 +7,8 @@ import styles from "./NavigationPage.module.css" // Import CSS for styling
 export default function NavigationPage() {
   return (
     <>
-      <div className={styles.canvasContainer}> {/* Add the container div with styling */}
-        <Canvas className={styles.canvas} camera={{ position: [0, 3, 8], fov: 50 }}> {/* Apply the canvas class */}
+      <div className={styles.canvas}> {/* Add the container div with styling */}
+        <Canvas camera={{ position: [0, 3, 8], fov: 50 }}> {/* Apply the canvas class */}
           <ambientLight />
           <OrbitControls enablePan={true} enableZoom={false} enableRotate={true} maxPolarAngle={Math.PI / 2} />
           <Suspense fallback={null}>

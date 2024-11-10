@@ -7,11 +7,11 @@ export default function TwoBrightFutures() {
 
   return (
     <>
-      <div className='Choice'>
-        <button id='FutureCityFirst' onClick={() => navigate('/FutureCity')}>
+      <div className={styles.choice}>
+        <button className={styles.FutureCityFirst} onClick={() => navigate('/FutureCity')}>
           WonderCity
         </button>
-        <button id='FutureCitySecond' onClick={() => navigate('/FutureCity2')}>
+        <button className={styles.FutureCitySecond} onClick={() => navigate('/FutureCity2')}>
           Wonderland
         </button>
       </div>

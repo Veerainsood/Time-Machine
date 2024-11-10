@@ -1280,12 +1280,25 @@ section.our-facts h2 {
   text-align: center;
   background-color: rgba(250, 250, 250, 0.15);
   border-radius: 20px;
-  padding: 20px;
-  width: 100%;
-  margin: 15px;
+  padding: 2rem; /* Use rem for better scalability */
+  width: 100%; /* Ensures full width */
+  margin: 2%; /* Margin percentage works well for responsiveness */
   flex: 1; /* Allows it to grow in height with other elements */
+  box-sizing: border-box; /* Includes padding and borders in width/height calculations */
 }
 
+/* Optional: Adjust styles for smaller screen sizes */
+@media (max-width: 768px) {
+  .count-area-content {
+    padding: 1.5rem; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .count-area-content {
+    padding: 1rem; /* Adjust padding further for very small screens */
+  }
+}
 .percentage .count-digit:after {
   content: '%';
   margin-left: 3px;
