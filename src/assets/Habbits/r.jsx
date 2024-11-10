@@ -28,7 +28,7 @@ export default function R () {
                         <a href="./EduVids">Videos</a>
                     </li>
                     <li className="scroll-to-section">
-                      <a href="../assets/shop/index_2.html">Shop</a>
+                      <a href="https://save-nature-site.onrender.com">Shop</a>
                     </li>
                     <li className="scroll-to-section">
                       <a href="./Login">3D</a>
