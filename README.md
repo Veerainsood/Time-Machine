@@ -18,7 +18,7 @@ Hosted ->[ https://time-machine-tntb.onrender.com/](https://time-machine-hosting
 - 📌**Video Graphic Learning + Educational Content -> Aseem ⚠️ $\color{#FFFF00}(Delayed)$**
 - 📌**Backend Website Dev -> Aseem ❌ ($\color{#FF0000}Rejected \color{#FF0000}to \color{#FF0000}do)$**
 - 📌**Aseem(Commited minimum to developing a website better than or similar to https://jkyog.in/en/.**
-- 📌**UI Dev -> Aseem ❌ ($\color{#FF0000}Failed \color{#FF0000}to \color{#FF0000}do)**
+- 📌**UI Dev -> Aseem ❌ ($\color{#FF0000}Failed \color{#FF0000}to \color{#FF0000}do)$**
 ---
 
 ---
