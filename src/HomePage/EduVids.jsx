@@ -264,29 +264,6 @@ export default function EduVids (){
       </div>
     </div>
   </div>
-  <div className="footer">
-    <p>
-      Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved.
-      <br />
-      Design:{" "}
-      <a
-        href="https://templatemo.com"
-        target="_parent"
-        title="free css templates"
-      >
-        TemplateMo
-      </a>
-      <br />
-      Distibuted By:{" "}
-      <a
-        href="https://themewagon.com"
-        target="_blank"
-        title="Build Better UI, Faster"
-      >
-        ThemeWagon
-      </a>
-    </p>
-  </div>
 </section>
 <section className="contact-us" id="contact">
           <div className="container">
@@ -369,19 +346,19 @@ export default function EduVids (){
                   <ul>
                     <li>
                       <h6>Phone Number</h6>
-                      <span>010-020-0340</span>
+                      <span>66666999999</span>
                     </li>
                     <li>
                       <h6>Email Address</h6>
-                      <span>info@meeting.edu</span>
+                      <span>timeMachine@gmail.com</span>
                     </li>
                     <li>
                       <h6>Street Address</h6>
-                      <span>Rio de Janeiro - RJ, 22795-008, Brazil</span>
+                      <span>IIT Tirupati India</span>
                     </li>
                     <li>
                       <h6>Website URL</h6>
-                      <span>www.meeting.edu</span>
+                      <span>www.timeTravels.com</span>
                     </li>
                   </ul>
                 </div>

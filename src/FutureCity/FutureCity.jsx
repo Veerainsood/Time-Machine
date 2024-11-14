@@ -20,7 +20,7 @@ function FutureCity() {
     <>    
       <Suspense>
       <div className={styles.map3d}>  
-      <img className={styles.map} id="map" src="../src/FutureCity/FutureMap.png" height="150px" style={{ width: "60%" }} /> <br />
+      <img className={styles.map} id="map" src="/FutureMap.png" height="150px" style={{ width: "60%" }} /> <br />
         WASD (← → ↑ ↓) for movement + Space to jump
       </div>
       <div className={styles.Descrip}>{"Future City Saved Nature (2024 <---> 2224)"}</div>
@@ -37,7 +37,7 @@ function FutureCity() {
           <tbody>
             <tr>
               <td>City Center</td>
-              <td>15</td>
+              <td>25</td>
               <td>110</td>
               <td>25</td>
             </tr>
@@ -49,7 +49,7 @@ function FutureCity() {
             </tr>
             <tr>
               <td>Residential Area</td>
-              <td>20</td>
+              <td>10</td>
               <td>100</td>
               <td>15</td>
             </tr>

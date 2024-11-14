@@ -371,19 +371,19 @@ export default function HomePage(){
                   <ul>
                     <li>
                       <h6>Phone Number</h6>
-                      <span>010-020-0340</span>
+                      <span>66666999999</span>
                     </li>
                     <li>
                       <h6>Email Address</h6>
-                      <span>info@meeting.edu</span>
+                      <span>timeMachine@gmail.com</span>
                     </li>
                     <li>
                       <h6>Street Address</h6>
-                      <span>Rio de Janeiro - RJ, 22795-008, Brazil</span>
+                      <span>IIT Tirupati India</span>
                     </li>
                     <li>
                       <h6>Website URL</h6>
-                      <span>www.meeting.edu</span>
+                      <span>www.timeTravels.com</span>
                     </li>
                   </ul>
                 </div>
