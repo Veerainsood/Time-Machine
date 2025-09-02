@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🌍 Forest Degradation Simulation
 
 (Warning Heavy site ... due to many 3d maps so may take time to load.. for best performance run on local machine)
