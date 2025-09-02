@@ -2,9 +2,6 @@
 
 Hosted ->[Vercel App Link](https://time-machine-hosting.vercel.app/)
 
-(may need to revist the same link for best experience)
-
-
 ---
 ## 🎯 Final Tasks + Their Results:
 ### **The team members have commited to these basic functionalities being completed by the end of the project..**
