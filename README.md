@@ -2,23 +2,6 @@
 
 Hosted ->[Vercel App Link](https://time-machine-hosting.vercel.app/)
 
----
-## 🎯 Final Tasks + Their Results:
-### **The team members have commited to these basic functionalities being completed by the end of the project..**
-- 📌**Adding and mentaining 5 3D Maps + Sustainable action developed -> Veerain and Aman ✅ $\color{#00FF00}(Completed)$** 
-- 📌**Shop -> Kalyan ✅ $\color{#00FF00}(Completed)$**
-- 📌**Website Content Addition -> Aman + Kalyan ✅ $\color{#00FF00}(Completed)$**
----
-
----
-## 🎯 Future Task Assignment:
-### **The team members have commited to these basic functionalities being completed by the end of the project..**
-### **Any $\color{#FF0000}{Contribution}$ by any member will be taken into account $\color{#FF0000}{only~when}$** **$\color{#FF0000}{they~complete}$** **$\color{#FF0000}{their~allotted}$ $\color{#FF0000}{task}$✔️**
-- 📌**Adding and mentaining 5 3D Maps + Sustainable action developed -> Veerain and Aman (Added)**
-- 📌**Eductional Hub + Backend Website -> Kalyan (Added)**
-- 📌**More yet to be revealed**
----
-
 ## 📜 About
 
 Our website simulates **Forest Degradation** over the years, offers potential solutions, and generates awareness among the masses. Forests globally are facing significant environmental degradation due to deforestation, unsustainable practices, and the effects of climate change.
@@ -97,13 +80,15 @@ This project bridges the gap by offering an **interactive**, **personalized**, a
 
 ---
 
+---
+## 🎯 Final Tasks + Their Results:
+### **The team members have commited to these basic functionalities being completed by the end of the project..**
+- 📌**Adding and mentaining 5 3D Maps + Sustainable action developed -> Veerain and Aman ✅ $\color{#00FF00}(Completed)$** 
+- 📌**Shop -> Kalyan ✅ $\color{#00FF00}(Completed)$**
+- 📌**Website Content Addition -> Aman + Kalyan ✅ $\color{#00FF00}(Completed)$**
+---
 
 
 ## 📧 Contact
 
 Feel free to reach out to any of the contributors for more information or to contribute to the project!
-
-
-=======
-# Time-Machine
->>>>>>> temp
